@@ -1,2 +1,2 @@
 # flake8: noqa
-import orderadmin
+import shop.admin.orderadmin

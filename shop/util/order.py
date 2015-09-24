@@ -1,6 +1,6 @@
 #-*- coding: utf-8 -*-
 from django.contrib.auth.models import AnonymousUser
-from shop.models.ordermodel import Order
+from shop.models import Order
 
 
 def get_orders_from_request(request):
