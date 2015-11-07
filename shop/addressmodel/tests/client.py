@@ -35,7 +35,7 @@ class ClientTestCase(TestCase):
 #    def test_unicode_method_works(self):
 #        self.create_fixtures()
 #        expected = "ClientProfile for Test Toto"
-#        text = self.client.__unicode__()
+#        text = self.client.__str__()
 #        self.assertEqual(expected, text)
 
     def test_unicode_method_works_for_null_user_info(self):
@@ -43,6 +43,6 @@ class ClientTestCase(TestCase):
         u = User.objects.create(username="test2",
                                 email="test2@example.com")
         expected = "test2"
-        text = u.__unicode__()
+        text = str(u)
         self.assertEqual(expected, text)
         u.delete()

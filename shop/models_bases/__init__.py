@@ -40,7 +40,7 @@ class BaseProduct(PolymorphicModel):
         verbose_name = _('Product')
         verbose_name_plural = _('Products')
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
     def get_absolute_url(self):
@@ -62,7 +62,7 @@ class BaseProduct(PolymorphicModel):
         """
         Returns product reference of this Product (provided for extensibility).
         """
-        return unicode(self.pk)
+        return str(self.pk)
 
     @property
     def can_be_added_to_cart(self):
@@ -371,7 +371,7 @@ class BaseOrder(models.Model):
         verbose_name = _('Order')
         verbose_name_plural = _('Orders')
 
-    def __unicode__(self):
+    def __str__(self):
         return _('Order ID: %(id)s') % {'id': self.pk}
 
     def get_absolute_url(self):
